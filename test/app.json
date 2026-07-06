@@ -1,0 +1,39 @@
+{
+  "id": "8d363ee8-6883-4096-9d74-0734c22e4314",
+  "name": "Dyna-Query Tests",
+  "publisher": "EneaFrontera",
+  "version": "28.0.0.0",
+  "brief": "",
+  "description": "Test app for Dyna-Query (AL-Go dual-project).",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [
+    {
+      "id": "91e79380-a615-4a3e-8fdc-579ffc7336aa",
+      "name": "Dyna-Query",
+      "publisher": "EneaFrontera",
+      "version": "28.0.0.0"
+    }
+  ],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "28.0.0.0",
+  "idRanges": [
+    {
+      "from": 50100,
+      "to": 50149
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": false,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "17.0",
+  "features": [
+    "NoImplicitWith"
+  ]
+}

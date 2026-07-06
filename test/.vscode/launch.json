@@ -1,0 +1,38 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Production Online",
+            "request": "launch",
+            "type": "al",
+            "tenant": "63c268a7-2b11-40f3-a1db-a7a93552237a",
+            "environmentType": "Production",
+            "environmentName": "Production",
+            "startupObjectId": 22,
+            "startupObjectType": "Page",
+            "breakOnError": "All",
+            "launchBrowser": true,
+            "enableLongRunningSqlStatements": true,
+            "enableSqlInformationDebugger": true,
+            //"usePublicURLFromServer": true,
+            // "schemaUpdateMode": "Recreate"
+        },
+        {
+            "name": "Dyna-Query",
+            "request": "launch",
+            "type": "al",
+            "tenant": "63c268a7-2b11-40f3-a1db-a7a93552237a",
+            "environmentType": "Sandbox",
+            "environmentName": "Dyna-Query",
+            "startupObjectId": 22,
+            "startupObjectType": "Page",
+            "breakOnError": "All",
+            "launchBrowser": true,
+            "enableLongRunningSqlStatements": true,
+            "enableSqlInformationDebugger": true,
+            //"usePublicURLFromServer": true,
+            // "schemaUpdateMode": "Recreate"
+        }
+        
+    ]
+}

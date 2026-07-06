@@ -1,0 +1,21 @@
+{
+  "req": "dyna-query-engine-core",
+  "phase": 2,
+  "phaseName": "AL-Go dual-project scaffolding",
+  "bcquality": { "decision": "not-applicable", "mounted": false, "reason": "../bcquality absent; aldc.yaml enabled=auto", "outcome": "not-applicable" },
+  "reviewMode": "native A-G",
+  "summary": { "counts": { "blocker": 0, "major": 0, "minor": 4, "info": 1 } },
+  "review": {
+    "verdict": "APPROVED_WITH_RECOMMENDATIONS",
+    "notes": "Scaffolding coherent and extension-only. Build/test NOT executed in this environment (no AL compiler / Sandbox) — GREEN must be confirmed on Sandbox via F5. Minors are non-blocking follow-ups.",
+    "skills-compliance": "skill-testing (GWT smoke test structure) applied."
+  },
+  "findings": [
+    { "id": "F1", "severity": "minor", "actionable": true, "category": "consistency", "message": "Namespace inconsistency: app uses 'DefaultPublisher.DynaQuery', test uses 'DynaQuery.Test', publisher is 'EneaFrontera'. Reconcile with the DQ/prefix decision.", "location": "app/HelloWorld.al, test/src/DQSmokeTests.Codeunit.al", "fix-hint": "Resolve open question Q1 (prefix/namespace) before Phase 4 and align all namespaces." },
+    { "id": "F2", "severity": "minor", "actionable": true, "category": "manifest", "message": "platform is '1.0.0.0' placeholder in both app.json files.", "location": "app/app.json:16, test/app.json", "fix-hint": "Set platform to the real minimum (e.g. 28.0.0.0). Note: user previously reverted this to 1.0.0.0 — confirm before changing." },
+    { "id": "F3", "severity": "minor", "actionable": true, "category": "tooling", "message": "Root .vscode/launch.json is now orphaned (no AL project at root after restructure).", "location": ".vscode/launch.json", "fix-hint": "Use the per-project app/.vscode & test/.vscode configs or the .code-workspace; remove or repurpose the root one." },
+    { "id": "F4", "severity": "minor", "actionable": true, "category": "convention", "message": "Smoke test uses codeunit ID 50149; spec allocated tests to 50140-50145.", "location": "test/src/DQSmokeTests.Codeunit.al:3", "fix-hint": "Optionally renumber to an allocated test band, or keep 50149 as the reserved smoke slot and note it." },
+    { "id": "F5", "severity": "info", "actionable": false, "category": "dependencies", "message": "test/app.json intentionally omits test-toolkit deps (Library Assert, Tests-TestLibraries); smoke test is self-contained. To be added with verified GUIDs in Phase 3/5.", "location": "test/app.json", "fix-hint": "Add verified toolkit dependencies when tests first reference Assert / Library - Lower Permissions." }
+  ],
+  "buildStatus": "not-executed (no AL compiler / Sandbox in environment; verify on Sandbox via F5)"
+}
